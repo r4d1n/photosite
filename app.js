@@ -8,27 +8,23 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars'); // templating engine
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var portfolio = require('./routes/portfolio');
 
 var app = express();
-
-// hacks to run locally
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-})
 
 // instantiate handlebars-express engine
 var hbs = exphbs.create({
   defaultLayout: 'layout',
   layoutsDir: 'views/',
-  partialsDir: 'views/partials/'
 })
 
-// register hbs.engine from express-handlebars module
+// register hbs.engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+
+app.use('/', routes);
+app.use(portfolio);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -38,8 +34,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+
+
+// hacks to run locally
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
