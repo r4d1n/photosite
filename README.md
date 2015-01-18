@@ -1,2 +1,2 @@
 # photosite
-a photography portfolio site
+a bootstrap-based portfolio site for photographs
