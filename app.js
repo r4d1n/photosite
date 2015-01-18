@@ -5,14 +5,29 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var exphbs = require('express-handlebars'); // templating engine
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// hacks to run locally
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+})
+
+// instantiate handlebars-express engine
+var hbs = exphbs.create({
+  defaultLayout: 'layout',
+  layoutsDir: 'views/',
+})
+
+// register hbs.engine from express-handlebars module
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -58,3 +73,13 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+
+var server = app.listen(3001, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log('App listening at http://%s:%s', host, port)
+
+})
