@@ -23,6 +23,7 @@ app.use(function(req, res, next) {
 var hbs = exphbs.create({
   defaultLayout: 'layout',
   layoutsDir: 'views/',
+  partialsDir: 'views/partials/'
 })
 
 // register hbs.engine from express-handlebars module
