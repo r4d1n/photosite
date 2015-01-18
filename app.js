@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars'); // templating engine
 
 var routes = require('./routes/index');
-var portfolio = require('./routes/portfolio');
+var showcase = require('./routes/showcase');
 
 var app = express();
 
@@ -24,7 +24,7 @@ app.set('view engine', 'handlebars');
 
 
 app.use('/', routes);
-app.use(portfolio);
+app.use(showcase);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));

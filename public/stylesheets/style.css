@@ -55,7 +55,10 @@ table {
 
 /* Begin basic sitewide tweaks */
 
-body { padding-top: 70px; }
+body {
+  padding-top: 70px;
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
 
 nav {
   font-family: 'Arvo', Georgia, Times, serif;
@@ -82,7 +85,16 @@ img {
 
 /* End Showcase */
 
-/* Begin Social Buttons */
+/* Begin Nav */
+.btn {
+  background-color: #666666;
+  border-color: #666666;
+}
+.btn:hover {
+  background-color: #ababab;
+  border-color: #ababab;
+}
+
 .social-profiles {
   margin: 0;
   padding: 0;
@@ -104,11 +116,10 @@ img {
   line-height: 30px;
   text-align: center;
   color: #fff!important;
-  background-color: #000;
+  background-color: #666666;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 
-.social-button { background-color: #666666 }
-.social-button:hover { background-color: #D3C6AB }
+.social-button:hover { background-color: #ababab }
