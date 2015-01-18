@@ -53,6 +53,8 @@ table {
 
 /* End CSS Reset */
 
+/* Begin basic sitewide tweaks */
+
 body { padding-top: 70px; }
 
 nav {
@@ -65,8 +67,22 @@ p {
   line-height: 25px;
 }
 
+/* End basic sitewide */
 
-/* Social Buttons */
+/* Begin Showcase */
+.showcase {
+  max-width: 65%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+/* End Showcase */
+
+/* Begin Social Buttons */
 .social-profiles {
   margin: 0;
   padding: 0;
@@ -94,7 +110,5 @@ p {
   border-radius: 3px;
 }
 
-.social-button.social-mail { background-color: #666666 }
-.social-button.social-twitter { background-color: #00aced; }
-.social-button.social-instagram { background-color: #3f729b; }
-.social-button.social-linkedin { background-color: #0976b4; }
+.social-button { background-color: #666666 }
+.social-button:hover { background-color: #D3C6AB }
