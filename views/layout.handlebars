@@ -15,16 +15,22 @@
 
 <body>
   <!-- Top nav -->
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="/">Photosite</a>
-        <ul class="nav navbar-nav">
-          <li id="nav-portfolio"><a href="/portfolio">Portfolio</a></li>
-          <li id="nav-about"><a href="/about">About</a></li>
-          <li id="nav-cv"><a href="/cv">CV</a></li>
-        </ul>
       </div>
+      <ul class="nav navbar-nav navbar-left">
+        <li id="nav-portfolio"><a href="/portfolio">Portfolio</a></li>
+        <li id="nav-about"><a href="/about">About</a></li>
+        <li id="nav-cv"><a href="/cv">CV</a></li>
+      </ul>
+      <ul class = "social-profiles navbar-right">
+        <li><a href="#" class="social-button social-mail" title="Mail"><i class="fa fa-envelope"></i></a></li>
+        <li><a href="#" class="social-button social-twitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" class="social-button social-instagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#" class="social-button social-linkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
     </div>
   </nav>
 
@@ -35,7 +41,7 @@
 
   </main>
 
-  <script src="./public/jquery.js"></script>
+
 </body>
 
 </html>

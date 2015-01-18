@@ -53,6 +53,8 @@ table {
 
 /* End CSS Reset */
 
+body { padding-top: 70px; }
+
 nav {
   font-family: 'Arvo', Georgia, Times, serif;
 }
@@ -62,3 +64,37 @@ p {
   font-size: 16px;
   line-height: 25px;
 }
+
+
+/* Social Buttons */
+.social-profiles {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+}
+
+.social-profiles li {
+  display: inline-block;
+  margin: 5px 5px 5px 0;
+  font-size: 14px;
+}
+
+.social-button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff!important;
+  background-color: #000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.social-button.social-mail { background-color: #666666 }
+.social-button.social-twitter { background-color: #00aced; }
+.social-button.social-instagram { background-color: #3f729b; }
+.social-button.social-linkedin { background-color: #0976b4; }
