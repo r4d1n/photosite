@@ -28,6 +28,16 @@ var imgArr = [
 }
 ]
 
+function randomIndex(arr) {
+  var max = arr.length;
+  return Math.floor(Math.random() * (max));
+}
+
+router.get('/', function(req, res, next) {
+  var i = randomIndex(imgArr);
+  res.render('index', imgArr[i]);
+})
+
 router.get('/portfolio', function(req, res, next) {
   res.render('portfolio', {'images': imgArr});
 })
