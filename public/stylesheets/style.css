@@ -70,17 +70,49 @@ p {
   line-height: 25px;
 }
 
+a {
+  color: #666666;
+}
+
+a:visited {
+  color: #666666;
+}
+
+a:hover {
+  color: #ababab
+}
+
+a:active {
+  color: #000000
+}
+
 /* End basic sitewide */
 
 /* Begin Showcase */
 .showcase {
-  max-width: 65%;
+  max-width: 80%;
+  position: relative;
 }
 
-img {
-  max-width: 100%;
+.showcase img {
+  max-width: 80%;
   height: auto;
   width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.showcase a {
+  position: absolute;
+  bottom: 50%;
+}
+
+.next {
+  right: 0;
+}
+
+.previous {
+  left: 0;
 }
 
 /* End Showcase */
