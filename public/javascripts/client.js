@@ -1,7 +1,7 @@
 $(document).ready(function() {
-
-
-
-  
-
-} // end document ready
+  var i = 0;
+  $('.next').click(function () {
+    i++;
+    $.get("/portfolio", { index : i })
+  })
+})

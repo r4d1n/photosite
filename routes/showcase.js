@@ -42,4 +42,9 @@ router.get('/portfolio', function(req, res, next) {
   res.render('portfolio', imgArr[0]);
 })
 
+router.get('/portfolio/next', function(req, res, next) {
+  var next = req.index + 1;
+  res.render('portfolio', imgArr[next]);
+})
+
 module.exports = router;
