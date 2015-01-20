@@ -40,19 +40,38 @@ router.get('/', function(req, res, next) {
   res.render('index', imgArr[i]);
 })
 
-router.get('/portfolio', function(req, res, next) {
+router.get('/portfolio', function(req, res) {
   i = 0;
-  res.render('portfolio', imgArr[i]);
+  var prev = imgArr.length - 1;
+  var next = i + 1;
+  res.render('portfolio', {
+    img: imgArr[i],
+    prev: prev,
+    next: next
+  })
 })
 
-router.get('/portfolio', function(req, res, next) {
-  if(req.body.index) {
-    i = req.body.index;
+router.get('/:id', function(req, res) {
+  console.log(req.params.id);
+  req.params.id ? i = req.params.id : i = 0;
+  var prev;
+  var next;
+  var max = imgArr.length - 1;
+  if (i === 0) {
+    prev = max;
   } else {
-    i = 0;
+    prev = parseInt(i) - 1;
   }
-  res.render('portfolio', imgArr[i]);
+  if (i >= max) {
+    next = 0;
+  } else {
+    next = parseInt(i) + 1;
+  }
+  res.render('portfolio', {
+    img: imgArr[i],
+    prev: prev,
+    next: next
+  })
 })
-
 
 module.exports = router;

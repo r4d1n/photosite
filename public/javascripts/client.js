@@ -1,16 +1,16 @@
-var i;
-
-$(document).ready(function() {
-  i = 0;
-  $.get("/portfolio", { index : i });
-});
-
-$('.next').click(function() {
-  i++;
-  $.get("/portfolio", { index : i });
-});
-
-$('.prev').click(function() {
-  i--;
-  $.get("/prev", { index : i });
-});
+// $('#portfolio-div').ready(function() {
+//   var i = 0;
+//   $.get("/portfolio", { id : i });
+// });
+//
+// $('.next').click(function() {
+//   var href = $(this).attr('href');
+//   $.get('/portfolio/', { id : href });
+//
+// });
+//
+// $('.prev').click(function() {
+//   var href = $(this).attr('href');
+//   $.get('/portfolio/', { id : href });
+//
+// });
