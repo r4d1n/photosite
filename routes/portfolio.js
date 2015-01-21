@@ -29,7 +29,7 @@ router.get('/:id', function(req, res) {
     next = parseInt(i) + 1;
   };
 
-  res.render('portfolio', {
+  res.send({
     img: imgArr[i],
     prev: prev,
     next: next

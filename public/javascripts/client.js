@@ -1,12 +1,19 @@
-$('.next').click(function() {
+$('.ctrl').click(function() {
+  var $img = $('#portfolio-img');
   var href = $(this).attr('href');
-  console.log(href);
- $('#portfolio-img').fadeOut('fast', function(){
-     $('body').load(href);
- });
- return false;
+  $img.fadeOut('fast', function(){
+    $.get(href, function(res) {
+      $img.attr('src', res.img.src).attr('alt', res.img.alt);
+      $img.fadeIn('slow', function() {
+        $('.next').attr('href', '/portfolio/' + res.next);
+        $('.prev').attr('href', '/portfolio/' + res.prev);
+      });
+    });
+  });
+  return false;
 });
 
-$('.prev').click(function() {
 
-});
+function handleSwap(res) {
+
+}
