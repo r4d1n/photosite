@@ -54,10 +54,17 @@ table {
 /* End CSS Reset */
 
 /* Begin basic sitewide tweaks */
+html, body {
+  height: 100%;
+}
 
 body {
   padding-top: 70px;
   overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+main {
+  height: 100%;
 }
 
 nav {
@@ -92,6 +99,13 @@ a:active {
 .showcase {
   max-width: 95%;
   position: relative;
+  height: 100%
+}
+
+.image-frame {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
 }
 
 .showcase img {
