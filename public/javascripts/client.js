@@ -11,8 +11,3 @@ $('.ctrl').click(function() {
   });
   return false;
 });
-
-
-function handleSwap(res) {
-
-}
