@@ -1,7 +1,13 @@
-$(document).ready(function() {
-  var i = 0;
-  $('.next').click(function () {
-    i++;
-    $.get("/portfolio", { index : i })
-  })
-})
+$('.ctrl').click(function() {
+  var $img = $('#portfolio-img');
+  var href = $(this).attr('href');
+  $img.fadeOut('fast', function(){
+    $.get(href, function(res) {
+      $img.attr('src', res.img.src).attr('alt', res.img.alt);
+      $img.fadeIn('slow');
+      $('.next').attr('href', '/portfolio/' + res.next);
+      $('.prev').attr('href', '/portfolio/' + res.prev);
+    });
+  });
+  return false;
+});

@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars'); // templating engine
 
 var routes = require('./routes/index');
-var showcase = require('./routes/showcase');
+var portfolio = require('./routes/portfolio');
+var imgArr = require('./routes/image-list');
 
 var app = express();
 
@@ -24,13 +25,13 @@ app.set('view engine', 'handlebars');
 
 
 app.use('/', routes);
-app.use(showcase);
+app.use('/portfolio', portfolio);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
