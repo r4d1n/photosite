@@ -61,14 +61,11 @@ html, body {
 body {
   padding-top: 70px;
   overflow-x: hidden; /* Prevent scroll on narrow devices */
+  background-color: #333;
 }
 
 main {
   height: 100%;
-}
-
-nav {
-  font-family: 'Arvo', Georgia, Times, serif;
 }
 
 p {
@@ -77,24 +74,18 @@ p {
   line-height: 25px;
 }
 
-a {
+a, a:visited, a:active, a:focus {
   color: #666666;
-}
-
-a:visited {
-  color: #666666;
+  outline-color: #666666;
 }
 
 a:hover {
-  color: #ababab
+  color: #999999;
 }
 
-a:active {
-  color: #000000
-}
+
 
 /* End basic sitewide */
-
 
 /* Begin Nav */
 
@@ -120,45 +111,6 @@ nav {
   overflow-y: visible;
 }
 
-/* Begin Showcase */
-.showcase {
-  max-width: 95%;
-  position: relative;
-  height: 100%
-}
-
-.image-frame {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-}
-
-.showcase img {
-  max-width: 80%;
-  max-height: 500px;
-  height: auto;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.showcase a.chev {
-  position: absolute;
-  bottom: 50%;
-}
-
-.portfolio-btn.next {
-  right: 0;
-}
-
-.portfolio-btn.prev {
-  left: 0;
-}
-
-/* End Showcase */
-
-/* Begin Nav */
->>>>>>> center-image
 .btn {
   background-color: #666666;
   border-color: #666666;
@@ -204,6 +156,17 @@ nav {
 .showcase {
   max-width: 95%;
   position: relative;
+  height: 95%;
+  padding-top: .5em;
+}
+
+.image-frame {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 .showcase img {
