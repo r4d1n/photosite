@@ -58,10 +58,7 @@ table {
 body {
   padding-top: 70px;
   overflow-x: hidden; /* Prevent scroll on narrow devices */
-}
-
-nav {
-  font-family: 'Arvo', Georgia, Times, serif;
+  background-color: #333;
 }
 
 p {
@@ -87,6 +84,32 @@ a:active {
 }
 
 /* End basic sitewide */
+
+/* Begin Nav */
+
+nav {
+  font-family: 'Arvo', Georgia, Times, serif;
+  opacity: 0.8;
+}
+
+.navbar-inverse .navbar-left li a /* .navbar-brand, .navbar-inverse .navbar-brand:hover */ {
+  color: #006633;
+}
+
+.navbar-inverse .navbar-left li a:hover {
+  color: #339966;
+}
+
+.red-number {
+  color: #990000;
+}
+
+.navbar-collapse.in {
+  /* prevent scroll bar on mobile drop down */
+  overflow-y: visible;
+}
+
+/* End Nav */
 
 /* Begin Showcase */
 .showcase {
