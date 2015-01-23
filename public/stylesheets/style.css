@@ -109,43 +109,11 @@ nav {
   overflow-y: visible;
 }
 
-/* End Nav */
-
-/* Begin Showcase */
-.showcase {
-  max-width: 95%;
-  position: relative;
-}
-
-.showcase img {
-  max-width: 80%;
-  max-height: 500px;
-  height: auto;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.showcase a.chev {
-  position: absolute;
-  bottom: 50%;
-}
-
-.portfolio-btn.next {
-  right: 0;
-}
-
-.portfolio-btn.prev {
-  left: 0;
-}
-
-/* End Showcase */
-
-/* Begin Nav */
 .btn {
   background-color: #666666;
   border-color: #666666;
 }
+
 .btn:hover {
   background-color: #ababab;
   border-color: #ababab;
@@ -179,3 +147,35 @@ nav {
 }
 
 .social-button:hover { background-color: #ababab }
+
+/* End Nav */
+
+/* Begin Showcase */
+.showcase {
+  max-width: 95%;
+  position: relative;
+}
+
+.showcase img {
+  max-width: 80%;
+  max-height: 500px;
+  height: auto;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.showcase a.chev {
+  position: absolute;
+  bottom: 50%;
+}
+
+.portfolio-btn.next {
+  right: 0;
+}
+
+.portfolio-btn.prev {
+  left: 0;
+}
+
+/* End Showcase */
