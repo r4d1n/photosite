@@ -102,13 +102,25 @@ nav {
   color: #339966;
 }
 
-.red-number {
+.chosen-number {
   color: #990000;
 }
 
 .navbar-collapse.in {
   /* prevent scroll bar on mobile drop down */
   overflow-y: visible;
+}
+
+li.portfolio-choices {
+  display: none;
+}
+
+.portfolio-choices a {
+  color: #666!important;
+}
+
+.portfolio-choices:hover {
+  color: #333;
 }
 
 .btn {
@@ -196,7 +208,7 @@ nav {
 /* Text */
 
 .about-text h3 {
- margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .cv-list {

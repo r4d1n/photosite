@@ -15,10 +15,15 @@ $('.ctrl').click(function() {
 });
 
 // ajax to swap portfolio link w/ numbers
-$('#nav-portfolio').click(function() {
+$('#nav-portfolio a').click(function() {
   var $self = $(this);
   var href = $self.attr('href');
+  console.log(href);
+  $self.hide();
+  $('li.portfolio-choices').show();
+  $.get(href);
 
+  return false;
 })
 
 // ajax to fade out index image, then load portfolio
