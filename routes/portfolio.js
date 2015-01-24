@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
 router.get('/:set/:id', function(req, res) {
   var b = req.params.set;
   var i = req.params.id ? req.params.id : 0;
-  if (i <= 0) {i = 0};
+  if (i <= 0) { i = 0 };
   // adjust var prev for 0th index
   var prev = i === 0 ? imgList[b].length - 1 : parseInt(i) - 1;
   // adjust var next for last in array
