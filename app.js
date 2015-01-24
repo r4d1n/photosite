@@ -9,7 +9,7 @@ var exphbs = require('express-handlebars'); // templating engine
 
 var routes = require('./routes/index');
 var portfolio = require('./routes/portfolio');
-var imgArr = require('./routes/image-list');
+var imgList = require('./routes/image-list');
 
 var app = express();
 

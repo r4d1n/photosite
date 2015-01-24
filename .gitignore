@@ -3,4 +3,4 @@ npm-debug.log
 node_modules
 *.swp
 public/javascripts/jquery.js
-public/images/*.jpg
+public/images/*

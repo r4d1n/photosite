@@ -2,8 +2,9 @@
 $('.ctrl').click(function() {
   var $img = $('#portfolio-img');
   var href = $(this).attr('href');
-  $img.fadeOut('fast', function(){
+  $img.fadeOut('fast', function() {
     $.get(href, function(res) {
+      console.log(res.img);
       $img.attr('src', res.img.src).attr('alt', res.img.alt);
       $img.fadeIn('slow');
       $('.next').attr('href', '/portfolio/' + res.next);
@@ -15,7 +16,9 @@ $('.ctrl').click(function() {
 
 // ajax to swap portfolio link w/ numbers
 $('#nav-portfolio').click(function() {
-  
+  var $self = $(this);
+  var href = $self.attr('href');
+
 })
 
 // ajax to fade out index image, then load portfolio

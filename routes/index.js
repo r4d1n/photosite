@@ -1,5 +1,5 @@
 var express = require('express');
-var imgArr = require('./image-list')
+var imgList = require('./image-list')
 var router = express.Router();
 
 
@@ -9,8 +9,8 @@ function randomIndex(arr) {
 }
 
 router.get('/', function(req, res, next) {
-  var i = randomIndex(imgArr);
-  res.render('index', imgArr[i]);
+  var i = randomIndex(imgList[0]);
+  res.render('index', imgList[0][i]);
 })
 
 router.get('/about', function(req, res, next) {
