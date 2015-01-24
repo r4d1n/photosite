@@ -1,3 +1,6 @@
+$(document).ready(function() {
+  $('.portfolio-choices').hide();
+
 // ajax to fade between images in portfolio
 $('.ctrl').click(function() {
   var $img = $('#portfolio-img');
@@ -14,17 +17,25 @@ $('.ctrl').click(function() {
   return false;
 });
 
-// ajax to swap portfolio link w/ numbers
-$('#nav-portfolio a').click(function() {
-  var $self = $(this);
-  var href = $self.attr('href');
+// ajax to get portfolio and swap nav item w/ numbers
+$('.img-enter').click(function() {
+    var href = $(this).attr('href');
   console.log(href);
-  $self.hide();
-  $('li.portfolio-choices').show();
-  $.get(href);
+  // swap portfolio for choices
+  $('#nav-portfolio').hide();
+  $('.portfolio-choices a').first().addClass('chosen');
+  $('.portfolio-choices').show();
+  // do some ajax
+  $.get(href, function(res) {
+    console.log(res);
+
+  });
 
   return false;
 })
+
+}) // end document ready
+
 
 // ajax to fade out index image, then load portfolio
 // $('#index-img').click(function() {

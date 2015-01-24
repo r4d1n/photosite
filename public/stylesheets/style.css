@@ -111,17 +111,20 @@ nav {
   overflow-y: visible;
 }
 
-li.portfolio-choices {
-  display: none;
+ul.navbar-left .portfolio-choices a {
+  color: #666;
 }
 
-.portfolio-choices a {
-  color: #666!important;
+ul.navbar-left .portfolio-choices a:hover {
+  color: #666;
+  background-color: #333!important;
 }
 
-.portfolio-choices:hover {
-  color: #333;
+
+li.portfolio-choices a.chosen {
+  color: #ff99cc;
 }
+
 
 .btn {
   background-color: #666666;
