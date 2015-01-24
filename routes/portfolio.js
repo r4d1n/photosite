@@ -16,26 +16,30 @@ router.get('/', function(req, res) {
 })
 
 router.get('/:set/:id', function(req, res) {
+  var b = req.params.set;
   var i = req.params.id ? req.params.id : 0;
-  var prev;
-  var next;
-  if (i <= 0) {
-    prev = imgList[set].length - 1;
-  } else {
-    prev = parseInt(i) - 1;
-  };
+  // adjust prev for 0th index
+  var prev = i === 0 ? imgList[b].length - 1 : parseInt(i) - 1;
+  // adjust next for last image
+  var next = i >= imgList[b].length - 1 ? 0 : parseInt(i) + 1;
 
-  if (i >= imgList[set].length - 1) {
-    next = 0;
-  } else {
-    next = parseInt(i) + 1;
-  };
-  var set = imgList[req.params.set];
-  console.log(set, prev, next);
+  // if (i <= 0) {
+  //   prev = imgList[b].length - 1;
+  // } else {
+  //   prev = parseInt(i) - 1;
+  // };
+  //
+  // if (i >= imgList[b].length - 1) {
+  //   next = 0;
+  // } else {
+  //   next = parseInt(i) + 1;
+  // };
+
+  console.log("b: " + b, "i: " + i, "prev: " + prev, "next: " + next);
   res.send({
-    img: set[i],
-    prev: set + "/" + prev,
-    next: set + "/" + next
+    img: imgList[b][i],
+    prev: b + "/" + prev,
+    next: b + "/" + next
   })
 })
 

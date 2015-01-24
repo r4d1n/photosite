@@ -4,7 +4,7 @@ $('.ctrl').click(function() {
   var href = $(this).attr('href');
   $img.fadeOut('fast', function() {
     $.get(href, function(res) {
-      console.log(res.img);
+      console.log(res);
       $img.attr('src', res.img.src).attr('alt', res.img.alt);
       $img.fadeIn('slow');
       $('.next').attr('href', '/portfolio/' + res.next);
