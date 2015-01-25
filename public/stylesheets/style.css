@@ -102,16 +102,12 @@ nav {
   color: #339966;
 }
 
-.chosen-number {
-  color: #990000;
-}
-
 .navbar-collapse.in {
-  /* prevent scroll bar on mobile drop down */
+  /* prevent scroll bar on mobile nav drop down */
   overflow-y: visible;
 }
 
-ul.navbar-left .portfolio-choices a {
+ul.navbar-left .portfolio-choices a, ul.navbar-left .portfolio-choices a:focus {
   color: #666;
 }
 
@@ -120,11 +116,12 @@ ul.navbar-left .portfolio-choices a:hover {
   background-color: #333!important;
 }
 
-
-li.portfolio-choices a.chosen {
+/*
+li.portfolio-choices a.chosen, li.portfolio-choices a.chosen:focus,
+li.portfolio-choices a.chosen:active {
   color: #ff99cc;
 }
-
+*/
 
 .btn {
   background-color: #666666;

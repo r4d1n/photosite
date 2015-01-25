@@ -13,7 +13,6 @@ router.get('/', function(req, res) {
     prev: 0 + "/" + prev,
     next: 0 + "/" + next
   })
-  console.log(res);
 })
 
 router.get('/:set/:id', function(req, res) {
