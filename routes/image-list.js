@@ -48,7 +48,6 @@ module.exports = [
 },
 {
   src: "/images/color/test6.jpg",
-  alt: "Sixth Test Image"
 }
 ]
 ];
