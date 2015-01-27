@@ -5,27 +5,26 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var exphbs = require('express-handlebars'); // templating engine
+var app = express();
 
 var routes = require('./routes/index');
 var portfolio = require('./routes/portfolio');
 var imgList = require('./routes/image-list');
 
-var app = express();
+app.use('/', routes);
+app.use('/portfolio', portfolio);
 
+// templating engine
+var exphbs = require('express-handlebars');
 // instantiate handlebars-express engine
 var hbs = exphbs.create({
   defaultLayout: 'layout',
   layoutsDir: 'views/',
 })
-
 // register hbs.engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-
-app.use('/', routes);
-app.use('/portfolio', portfolio);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
