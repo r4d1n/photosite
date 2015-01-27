@@ -9,21 +9,6 @@ $(document).ready(function() {
     $('#nav-portfolio').hide();
     $('.portfolio-choices').show();
   }
-  // var $choiceLinks = $('.portfolio-choices a');
-  // var classArr = $choiceLinks.attr('class');
-  // console.log(classArr);
-  // $('.ctrl').click(function() {
-  //   (this).addClass('chosen').siblings().removeClass('chosen');
-  // )
-
-  // need to do this only when another doesn't have it
-
-  // $('.portfolio-choices a').click(function() {
-  //   var classes = $(this).attr('class');
-  //   console.log(classes);
-  //   if ($self.attr('class') === 'chosen') {
-  //   }
-  // })
 
   // fade and reload images
   $('.ctrl').click(function() {
@@ -39,8 +24,5 @@ $(document).ready(function() {
     });
     return false;
   });
-
-
-
 
 }); // end document ready

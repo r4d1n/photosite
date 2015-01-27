@@ -23,7 +23,6 @@ router.get('/:set/:id', function(req, res) {
   var prev = i === 0 ? imgList[b].length - 1 : parseInt(i) - 1;
   // adjust var next for last in array
   var next = i >= imgList[b].length - 1 ? 0 : parseInt(i) + 1;
-  console.log("b: " + b, "i: " + i, "prev: " + prev, "next: " + next);
   res.send({
     img: imgList[b][i],
     prev: b + "/" + prev,
