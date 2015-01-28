@@ -14,8 +14,8 @@ $(document).ready(function() {
   $('.ctrl').click(function() {
     var $img = $('#portfolio-img');
     var href = $(this).attr('href');
-    $img.fadeOut('fast', function() {
-      $.get(href, function(res) {
+    $.get(href, function(res) {
+      $img.fadeOut('fast', function() {
         $img.attr('src', res.img.src).attr('alt', res.img.alt);
         $img.fadeIn('slow');
         $('.next').attr('href', '/portfolio/' + res.next);
