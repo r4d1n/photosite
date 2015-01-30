@@ -93,8 +93,13 @@ nav {
   opacity: 0.8;
 }
 
+.navbar .navbar-brand {
+  line-height: 1;
+}
+
 .navbar-inverse .navbar-left li a /* .navbar-brand, .navbar-inverse .navbar-brand:hover */ {
   color: #00ccff;
+  line-height: 1;
 }
 
 .navbar-inverse .navbar-left li a:hover {
