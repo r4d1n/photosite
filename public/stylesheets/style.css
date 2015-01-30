@@ -61,7 +61,6 @@ html, body {
 body {
   padding-top: 70px;
   overflow-x: hidden; /* Prevent scroll on narrow devices */
-  background-color: #333;
   color: #666;
 }
 
@@ -138,6 +137,7 @@ li.portfolio-choices a.chosen:active {
   padding: 0;
   list-style-type: none;
   font-size: 0;
+  line-height: 40px;
 }
 
 .social-profiles li {
