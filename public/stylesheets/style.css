@@ -89,17 +89,23 @@ a:hover {
 /* Begin Nav */
 
 nav {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
   opacity: 0.8;
 }
 
-.navbar .navbar-brand {
-  line-height: 1;
+.navbar-brand {
+
+  /*line-height: 40px;*/
+}
+
+.navbar-inverse .navbar-left {
+
 }
 
 .navbar-inverse .navbar-left li a /* .navbar-brand, .navbar-inverse .navbar-brand:hover */ {
   color: #00ccff;
-  line-height: 1;
+  padding: 15px 15px;
+  /*line-height: 40px;*/
 }
 
 .navbar-inverse .navbar-left li a:hover {
