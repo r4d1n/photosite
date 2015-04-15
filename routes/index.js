@@ -9,9 +9,8 @@ function randomIndex(arr) {
 }
 
 router.get('/', function(req, res, next) {
-  var b = randomIndex(imgList);
-  var i = randomIndex(imgList[b]);
-  res.render('index', imgList[b][i]);
+  var i = randomIndex(imgList);
+  res.render('index', imgList[i]);
 })
 
 router.get('/about', function(req, res, next) {

@@ -7,9 +7,9 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-var routes = require('./routes/index');
-var portfolio = require('./routes/portfolio');
-var imgList = require('./routes/image-list');
+var routes = require('./routes/index.js');
+var portfolio = require('./routes/portfolio.js');
+var imgList = require('./routes/image-list.js');
 
 app.use('/', routes);
 app.use('/portfolio', portfolio);
@@ -28,7 +28,7 @@ app.set('view engine', 'handlebars');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -37,11 +37,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // hacks to run locally
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-})
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+//   next();
+// })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -78,11 +78,11 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-var server = app.listen(3001, function () {
+var server = app.listen(1337, function () {
 
   var host = server.address().address
   var port = server.address().port
 
-  console.log('App listening at http://%s:%s', host, port)
+  // console.log('App listening at http://%s:%s', host, port)
 
 })
