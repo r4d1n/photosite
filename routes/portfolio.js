@@ -10,6 +10,7 @@ router.get('/', function(req, res) {
   res.render('portfolio', {
     // render first image from first set
     img: set[0],
+    preload: imgList[0][next],
     prev: 0 + "/" + prev,
     next: 0 + "/" + next
   })
@@ -23,8 +24,10 @@ router.get('/:set/:id', function(req, res) {
   var prev = i === 0 ? imgList[b].length - 1 : parseInt(i) - 1;
   // adjust var next for last in array
   var next = i >= imgList[b].length - 1 ? 0 : parseInt(i) + 1;
+  console.log(imgList[b][next]);
   res.send({
     img: imgList[b][i],
+    preload: imgList[b][next],
     prev: b + "/" + prev,
     next: b + "/" + next
   })
